@@ -1,8 +1,9 @@
 {
-  "name": "swagger-express-middleware",
+  "name": "swagger-express-middleware-for-s3",
   "version": "2.0.2",
-  "description": "Swagger middleware and mocks for Express",
+  "description": "Swagger middleware and mocks for Express adapted to AWS S3",
   "keywords": [
+    "s3",
     "express",
     "swagger",
     "middleware",
@@ -14,13 +15,11 @@
     "json"
   ],
   "author": {
-    "name": "James Messinger",
-    "url": "https://jamesmessinger.com"
+    "name": "sbor767"
   },
-  "homepage": "https://apidevtools.org/swagger-express-middleware/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/APIDevTools/swagger-express-middleware.git"
+    "url": "https://github.com/sbor767/swagger-express-middleware-for-s3.git"
   },
   "license": "MIT",
   "main": "lib/index.js",
@@ -62,7 +61,7 @@
     "debug": "^4.1.1",
     "lodash": "^4.17.11",
     "mkdirp": "^0.5.1",
-    "multer": "^0.1.8",
+    "multer": "^1.4.1",
     "ono": "^4.0.11",
     "swagger-methods": "^1.0.8",
     "swagger-parser": "^6.0.3",
