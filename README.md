@@ -4,7 +4,7 @@ Swagger Express Middleware using the latest version of multer
 
 Fork from [swagger-express-middleware](https://github.com/APIDevTools/swagger-express-middleware)
 
-The main goal of the fork is to use the latest `multer` package for compatibility with the `multer-s3` package that is supposed to be used to upload files to AWS S3.
+The main goal of the fork is to use the latest `multer` package ([multer 1.x](https://github.com/expressjs/multer)) for compatibility with the `multer-s3` package that is supposed to be used to upload files to AWS S3.
 
 Installation and Use
 --------------------------
