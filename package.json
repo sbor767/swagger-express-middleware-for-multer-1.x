@@ -1,7 +1,7 @@
 {
-  "name": "swagger-express-middleware-for-s3",
+  "name": "swagger-express-middleware-for-multer-1.x",
   "version": "2.0.2",
-  "description": "Swagger middleware and mocks for Express adapted to AWS S3",
+  "description": "Swagger middleware and mocks for Express using the latest version of multer package and adapted for use multer-s3 to upload files to AWS S3",
   "keywords": [
     "s3",
     "express",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sbor767/swagger-express-middleware-for-s3.git"
+    "url": "https://github.com/sbor767/swagger-express-middleware-for-multer-1.x"
   },
   "license": "MIT",
   "main": "lib/index.js",
