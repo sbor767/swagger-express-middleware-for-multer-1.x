@@ -1,6 +1,6 @@
 {
   "name": "swagger-express-middleware-for-multer-1.x",
-  "version": "2.0.2",
+  "version": "2.0.31",
   "description": "Swagger middleware and mocks for Express using the latest version of multer package and adapted for use multer-s3 to upload files to AWS S3",
   "keywords": [
     "s3",
