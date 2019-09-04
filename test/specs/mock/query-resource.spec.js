@@ -380,23 +380,6 @@ for (let spec of specs) {
             });
           });
 
-          it("should return the example value instead of undefined", (done) => {
-            api.paths["/pets/{PetName}"][method].responses[200].schema.example = { example: "The example value" };
-            api.paths["/pets/{PetName}"][method].responses[200].schema.type = "object";
-
-            let dataStore = new swagger.MemoryDataStore();
-            let resource = new swagger.Resource("/api/pets/Fido");
-            dataStore.save(resource, () => {
-              helper.initTest(dataStore, api, (supertest) => {
-                let request = supertest[method]("/api/pets/Fido");
-                noHeaders || request.expect("Content-Type", "application/json; charset=utf-8");
-                noHeaders || request.expect("Content-Length", "31");
-                helper.processMethod(request, method, { example: "The example value" });
-                request.end(helper.checkResults(done));
-              });
-            });
-          });
-
           it("should return a null value", (done) => {
             api.paths["/pets/{PetName}"][method].responses[200].schema.type = "object";
 
