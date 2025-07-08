@@ -1,18 +1,35 @@
-Swagger Express Middleware using the latest version of multer
-===
-### Swagger 2.0 middleware and mocks for Express.js
+# swagger-express-middleware (patched for multer 1.x support)
 
-Fork from [swagger-express-middleware](https://github.com/APIDevTools/swagger-express-middleware)
+>⚠️ No longer maintained This package has been abandoned for some time, and there are plenty of modern alternatives around which support OpenAPI v3.x listed on [OpenAPI.Tools](https://openapi.tools/) which you can use instead.
 
-The main goal of the fork is to use the latest `multer` package ([multer 1.x](https://github.com/expressjs/multer)) for compatibility with the `multer-s3` package that is supposed to be used to upload files to AWS S3.
+This is a patched version of [swagger-express-middleware](https://github.com/APIDevTools/swagger-express-middleware)
+designed to allow proper parsing of `multipart/form-data` using `multer@1.x`.
 
-Installation and Use
---------------------------
-Install using [npm](https://docs.npmjs.com/about-npm/).
+## Why
+
+The original library does not play well with `multer` due to premature body parsing,
+which leads to broken `req.body` or missing files.
+
+This fork modifies the behavior to:
+
+- Delay body parsing when `multipart/form-data` is detected
+- Let multer handle it as expected
+
+## Changes
+
+- Patched `body-parser.js` and `middleware.js`
+- Tested with NestJS + Swagger + Multer + file uploads
+
+## Usage
+
+Install directly from GitHub:
 
 ```bash
-npm install swagger-express-middleware
+npm install github:sbor767/swagger-express-middleware-for-multer-1.x
 ```
+
+Or clone and use manually.
+
 Then use it in your [Node.js](http://nodejs.org/) script like this:
 
 ```javascript
@@ -39,8 +56,12 @@ createMiddleware('PetStore.yaml', app, function(err, middleware) {
 });
 ```
 
-Samples & Walkthroughs
---------------------------
+
+## Disclaimer
+
+This is a workaround, not an official fork. Use at your own risk.
+
+---
 
 License
 --------------------------
